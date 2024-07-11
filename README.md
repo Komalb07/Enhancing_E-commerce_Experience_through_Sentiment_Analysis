@@ -24,9 +24,13 @@ the actual code implementation.
 **Actual code implementation:**
 
 • First import all the necessary libraries using “import” keyword.
+
 • Import the dataset into our working environment and remove all null values.
+
 • Perform EDA, by visualizing the data using bar plots from “matplotlib” library.
+
 • Split the data into training and testing sets using “train_test_split()” method.
+
 • Transform the text data into vectors using TF-IDF Vectorization method.
 • As the instances of “positive” class label are very high, we might get inappropriate results, so we need to handle this issue by sampling down the instances using various down sampling techniques. Here we have used 3 different sampling techniques namely Random Under Sampling, Tomek Links and combination of Random Under Sampling and SMOTE (Here SMOTE is an over sampling technique which is used to increase the instances of “neutral” class label as they are less in size).
 • After preparing the data, we need to train our Classifiers. Here we have used 3 different classifiers namely SVM, Random Forest, and Gradient Boosting Machine.
