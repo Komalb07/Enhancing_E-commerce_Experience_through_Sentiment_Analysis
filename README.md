@@ -2,15 +2,15 @@
 
 Following are the detailed instructions to successfully execute our program.
 
-**Pre-work:**
-1. **Programming Language:** Python
-2.** Working Environment:** PyCharm IDE
-3. **Download links:**
+Pre-work:
+1. Programming Language: Python
+2. Working Environment: PyCharm IDE
+3. Download links:
 For PyCharm CE: https://www.jetbrains.com/pycharm/download/?section=mac)
 For Python: https://www.python.org/downloads/
 Dataset: https://www.kaggle.com/datasets/niraliivaghani/flipkart-product-customer-
 reviews-dataset/
-4. **Installation commands for required python libraries:**
+4. Installation commands for required python libraries:
 (Run the following commands on PyCharm Terminal)
 To install pandas: pip install pandas
 To install matplotlib: pip install matplotlib
@@ -21,7 +21,7 @@ To install webbrowser: pip install webbrowser
 After laying all the groundwork like installing necessary software and toolkits, we need to focus on
 the actual code implementation.
 
-**Actual code implementation:**
+Actual code implementation:
 
 • First import all the necessary libraries using “import” keyword.
 
