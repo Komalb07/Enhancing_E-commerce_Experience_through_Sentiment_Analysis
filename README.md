@@ -1,45 +1,117 @@
-# Enhancing_ECommerce_Experience_through_Sentiment_Analysis
+# Enhancing E-commerce Experience through Sentiment Analysis
 
-Following are the detailed instructions to successfully execute our program.
+This repository contains the implementation of a **Sentiment Analysis Tool** designed to enhance e-commerce platforms by categorizing customer feedback into **positive**, **negative**, and **neutral** sentiments. The project leverages machine learning models and advanced data balancing techniques to improve user experience and provide actionable insights for e-commerce stakeholders.
 
-Pre-work:
-1. Programming Language: Python
-2. Working Environment: PyCharm IDE
-3. Download links:
-For PyCharm CE: https://www.jetbrains.com/pycharm/download/?section=mac)
-For Python: https://www.python.org/downloads/
-Dataset: https://www.kaggle.com/datasets/niraliivaghani/flipkart-product-customer-
-reviews-dataset/
-4. Installation commands for required python libraries:
-(Run the following commands on PyCharm Terminal)
-To install pandas: pip install pandas
-To install matplotlib: pip install matplotlib
-To install sklearn: pip install scikit-learn
-To install imblearn: pip install imblearn
-To install webbrowser: pip install webbrowser
+## Project Overview
 
-After laying all the groundwork like installing necessary software and toolkits, we need to focus on
-the actual code implementation.
+Customer feedback plays a crucial role in e-commerce, offering insights into user satisfaction and product performance. However, analyzing vast amounts of textual data manually is time-consuming and error-prone. This project automates sentiment analysis by:
 
-Actual code implementation:
+- Preprocessing and analyzing customer reviews.
+- Employing robust sampling techniques to handle imbalanced data.
+- Using machine learning models to classify sentiments with high accuracy.
+- Providing a user-friendly interface for real-time sentiment predictions.
 
-• First import all the necessary libraries using “import” keyword.
+By automating sentiment analysis, the project enhances decision-making and user satisfaction on e-commerce platforms.
 
-• Import the dataset into our working environment and remove all null values.
+## Key Features
 
-• Perform EDA, by visualizing the data using bar plots from “matplotlib” library.
+1. **Data Preprocessing**:
+   - Cleaned and tokenized textual data from the Flipkart Customer Reviews dataset.
+   - Transformed text into numerical vectors using the **TF-IDF Vectorizer**.
 
-• Split the data into training and testing sets using “train_test_split()” method.
+2. **Data Balancing**:
+   - Addressed data imbalance using:
+     - Random Under-Sampling (RUS)
+     - Tomek Links
+     - SMOTE (Synthetic Minority Oversampling Technique)
 
-• Transform the text data into vectors using TF-IDF Vectorization method.
+3. **Machine Learning Models**:
+   - Implemented the following classifiers:
+     - Support Vector Machine (SVM)
+     - Random Forest
+     - Gradient Boosting Machine
+   - Evaluated models using F1 Score and Recall Score for accuracy on imbalanced datasets.
 
-• As the instances of “positive” class label are very high, we might get inappropriate results, so we need to handle this issue by sampling down the instances using various down sampling techniques. Here we have used 3 different sampling techniques namely Random Under Sampling, Tomek Links and combination of Random Under Sampling and SMOTE (Here SMOTE is an over sampling technique which is used to increase the instances of “neutral” class label as they are less in size).
+4. **Interactive User Interface**:
+   - Users can input text reviews and receive real-time sentiment predictions.
+   - Integrated actions based on predictions:
+     - Redirecting negative reviews to email support.
+     - Encouraging surveys for neutral feedback.
+     - Sending a thank-you note for positive reviews.
 
-• After preparing the data, we need to train our Classifiers. Here we have used 3 different classifiers namely SVM, Random Forest, and Gradient Boosting Machine.
+## Methodology
 
-• We decided to evaluate the performance of our models using F1 and Recall score metrics.
+### 1. Dataset
+- **Source**: Flipkart Product Customer Reviews Dataset (Kaggle)
+- **Details**:
+  - Total Rows: 205,052
+  - Features: `product_name`, `product_price`, `Rate`, `Review`, `Summary`, and `Sentiment`
+  - Target: `Sentiment` (Positive, Negative, Neutral)
 
-• We have added an “interaction section” to demonstrate the actual working of our project.
+### 2. Sampling Techniques
+- Addressed the dataset's imbalance:
+  - Positive Sentiments: 147,171
+  - Negative Sentiments: 24,401
+  - Neutral Sentiments: 8,807
 
-• After defining all the functions, run the program. If there are no errors, we can observe the output on the terminal. Follow the instructions on the terminal to completely
-understand what our program does.
+- Applied Random Under-Sampling, Tomek Links, and SMOTE to ensure unbiased model training.
+
+### 3. Modeling
+- Preprocessed data was split into training and testing sets (75% train, 25% test).
+- Implemented SVM, Random Forest, and Gradient Boosting Classifiers.
+- Evaluated models using:
+  - **F1 Score**: Balances precision and recall.
+  - **Recall Score**: Ensures effective identification of relevant sentiments.
+
+### 4. Visualization
+- Visualized sentiment distribution before and after sampling using bar plots.
+
+### 5. Real-Time Sentiment Analysis
+- Developed an interactive system:
+  - Input: Customer review
+  - Output: Sentiment classification (Positive, Negative, Neutral)
+  - Actions: Email redirection, survey invitation, or acknowledgment.
+
+## Results
+
+For Random Under Sampling: 
+
+| Model                  | F1 Score | Recall Score |
+|------------------------|----------|--------------|
+| Support Vector Machine | *0.9175*  | *0.9134*      |
+| Random Forest          | *0.9043*  | *0.8988*      |
+| Gradient Boosting      | *0.9118*  | *0.9068*      |
+
+For Tomek Links Sampling: 
+
+| Model                  | F1 Score | Recall Score |
+|------------------------|----------|--------------|
+| Support Vector Machine | *0.9359*  | *0.9416*      |
+| Random Forest          | *0.9315*  | *0.9370*      |
+| Gradient Boosting      | *0.9291*  | *0.9346*      |
+
+For RUS + SMOTE Sampling: 
+
+| Model                  | F1 Score | Recall Score |
+|------------------------|----------|--------------|
+| Support Vector Machine | *0.9087*  | *0.9006*      |
+| Random Forest          | *0.8936*  | *0.8818*      |
+| Gradient Boosting      | *0.9020*  | *0.8859*      |
+
+## Repository Structure
+
+```
+Ecommerce-Sentiment-Analysis/
+├── data/                     # Dataset and preprocessed files
+├── notebooks/                # Jupyter notebooks for analysis
+├── scripts/                  # Python scripts for preprocessing, sampling, and modeling
+├── requirements.txt          # Python dependencies
+├── README.md                 # Project documentation
+└── sentiment_analysis.py     # Main script for running sentiment analysis
+```
+
+## Future Enhancements
+
+- **Cross-Language Support**: Expand sentiment analysis to handle multiple languages.
+- **Real-Time Analysis**: Integrate real-time processing for streaming customer reviews.
+- **Feature Expansion**: Incorporate contextual features like user demographics and product categories.
