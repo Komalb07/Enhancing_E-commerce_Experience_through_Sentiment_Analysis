@@ -98,18 +98,6 @@ For RUS + SMOTE Sampling:
 | Random Forest          | *0.8936*  | *0.8818*      |
 | Gradient Boosting      | *0.9020*  | *0.8859*      |
 
-## Repository Structure
-
-```
-Ecommerce-Sentiment-Analysis/
-├── data/                     # Dataset and preprocessed files
-├── notebooks/                # Jupyter notebooks for analysis
-├── scripts/                  # Python scripts for preprocessing, sampling, and modeling
-├── requirements.txt          # Python dependencies
-├── README.md                 # Project documentation
-└── sentiment_analysis.py     # Main script for running sentiment analysis
-```
-
 ## Future Enhancements
 
 - **Cross-Language Support**: Expand sentiment analysis to handle multiple languages.
