@@ -128,9 +128,9 @@ After evaluating multiple machine learning models with and without sampling tech
    - **Over-sampling (SMOTE) introduced noisy synthetic data**, reducing model generalization.
 
 ### **Key Takeaways**
-✔ **Data balancing techniques should not be applied blindly**—their impact should be tested on a case-by-case basis.  
-✔ **SVM is inherently robust to moderate class imbalance**, making it a strong candidate for sentiment analysis tasks.  
-✔ **Understanding the dataset before applying sampling techniques is crucial**, as unnecessary balancing can degrade performance.  
+- **Data balancing techniques should not be applied blindly**—their impact should be tested on a case-by-case basis.  
+- **SVM is inherently robust to moderate class imbalance**, making it a strong candidate for sentiment analysis tasks.  
+- **Understanding the dataset before applying sampling techniques is crucial**, as unnecessary balancing can degrade performance.  
 
 ## Conclusion
 
