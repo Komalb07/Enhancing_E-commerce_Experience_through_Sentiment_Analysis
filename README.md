@@ -52,7 +52,7 @@ By automating sentiment analysis, the project enhances decision-making and user 
 - Transformed text into numerical format using **TF-IDF Vectorization**.
 
 ### 3. Experimenting with Sampling Techniques
-- Implemented **data balancing techniques** to address class imbalance:
+- Tested **data balancing techniques** (Tomek Links, SMOTE, Random Under-Sampling) to evaluate their impact on model performance:
   - **Random Under-Sampling (RUS)**: Reduces majority class samples.
   - **Tomek Links (Under-Sampling)**: Removes overlapping samples for cleaner decision boundaries.
   - **SMOTE (Over-Sampling)**: Generates synthetic samples for minority classes.
@@ -82,7 +82,7 @@ By automating sentiment analysis, the project enhances decision-making and user 
 
 ## Results
 
-### **Baseline Performance (Without Sampling - Best Results)**
+### **Best Performing Model (No Sampling)**
 | Model                  | F1 Score  | Recall Score |
 |------------------------|----------|--------------|
 | Support Vector Machine | **0.9360**  | **0.9419**  |
